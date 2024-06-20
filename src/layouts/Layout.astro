@@ -1,0 +1,29 @@
+---
+import SkipLink from "@/components/SkipLink.astro";
+import Header from "@/components/layout/Header.astro";
+import ThemeProvider from "@/components/ThemeProvider.astro";
+import "../styles/global.css";
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+        <ThemeProvider />
+        <SkipLink />
+        <Header />
+		<div class="container">
+			<slot />
+		</div>
+	</body>
+</html>
+
+<style is:global>
+  /* 以下、スタイル */
+</style>
+
