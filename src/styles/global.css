@@ -33,3 +33,27 @@
 		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-8 pt-16 font-mono text-sm font-normal text-textColor antialiased;
 	}
 }
+
+ol {
+	@apply list-decimal pl-5;
+}
+
+ul {
+	@apply list-disc pl-5;
+}
+
+h4 {
+	@apply text-lg border-b border-black my-5;
+}
+
+h1 {
+	@apply text-2xl font-semibold text-accent-2
+}
+
+h2 {
+	@apply text-2xl;
+}
+
+ul {
+	@apply list-disc pl-5;
+}
