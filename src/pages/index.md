@@ -20,4 +20,4 @@ description: 説明
 - アニメ
     - ![](https://annict-profile-card.us.aldryn.io/watching/dokudami?season=all&bg_color=f2f2f2#&limit_images=3.svg)
 - バナー
-    - <a href="https://nitmic.club.nitech.ac.jp/"><img src="public/nitmic_banner.png" alt="Example Image" style="width:300px;"/></a>
+    - <a href="https://nitmic.club.nitech.ac.jp/"><img src="/nitmic_banner.png" alt="Example Image" style="width:300px;"/></a>
