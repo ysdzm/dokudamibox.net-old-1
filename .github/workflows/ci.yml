@@ -43,12 +43,10 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
-        # use astro check for issues
       - name: Run check
         run: pnpm astro check
 
-        # ensure build works
       - name: Run build
         run: pnpm build
