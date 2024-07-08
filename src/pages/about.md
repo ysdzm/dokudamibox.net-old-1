@@ -6,7 +6,22 @@ description: 説明
 # 以下、本文
 ---
 
-資格
+# About
+
+<br>
+
+- dokudami
+
+<br>
+
+**リンク**
+- github：https://github.com/ysdzm
+- Twitter：https://x.com/dokudamichang
+- はてなブログ：https://dokudamichang.hatenablog.com/archive
+
+<br>
+
+**資格**
 - ITパスポート　(2020)
 - VR技術者試験 セオリーコース　(2021)
 - VR技術者試験 アプリケーションコース　(2021)
