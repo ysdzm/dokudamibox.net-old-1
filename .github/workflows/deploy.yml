@@ -24,7 +24,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -39,7 +39,7 @@ jobs:
         uses: withastro/action@v1
         with:
           path: . # リポジトリ内のAstroプロジェクトのルートロケーション
-          node-version: 18 # サイト構築に使用するNodeのバージョン
+          node-version: 20 # サイト構築に使用するNodeのバージョン
           package-manager: pnpm@latest # 使用するパッケージマネージャ
 
   deploy:
