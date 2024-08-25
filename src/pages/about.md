@@ -18,6 +18,7 @@ description: 説明
 - github：https://github.com/ysdzm
 - Twitter：https://x.com/dokudamichang
 - はてなブログ：https://dokudamichang.hatenablog.com/archive
+- Pixiv：https://www.pixiv.net/users/62534197
 
 <br>
 
