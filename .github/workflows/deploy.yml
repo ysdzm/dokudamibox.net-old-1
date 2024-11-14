@@ -18,14 +18,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Update pnpm lockfile
+        run: pnpm update
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build and deploy site
         uses: withastro/action@v1
         with:
-          path: . # リポジトリ内のAstroプロジェクトのルートロケーション。(オプション)
-          node-version: 18 # サイト構築に使用するNodeのバージョン。デフォルトは18です。（オプション）
-          package-manager: pnpm@latest # 依存関係のインストールとサイトのビルドに使用する Node パッケージマネージャ。ロックファイルに基づいて自動的に検出されます。(オプション)
+          path: . # リポジトリ内のAstroプロジェクトのルートロケーション
+          node-version: 20 # サイト構築に使用するNodeのバージョン
+          package-manager: pnpm@latest # 使用するパッケージマネージャ
 
   deploy:
     needs: build
