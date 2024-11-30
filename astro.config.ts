@@ -30,7 +30,7 @@ export default defineConfig({
 			[
 				rehypeExternalLinks,
 				{
-					rel: ["nofollow, noopener, noreferrer"],
+					rel: ["nofollow", "noopener", "noreferrer"], // 修正: カンマを削除
 					target: "_blank",
 				},
 			],
@@ -42,15 +42,23 @@ export default defineConfig({
 			},
 		},
 	},
-	// https://docs.astro.build/en/guides/prefetch/
 	prefetch: true,
-	// ! Please remember to replace the following site property with your own domain
 	site: "https://dokudamibox.net",
 	vite: {
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
 		},
 		plugins: [rawFonts([".ttf", ".woff"])],
+		server: {
+			hmr: {
+				clientPort: 3000, // HMR クライアントが接続するポート（ホストのポート）
+			},
+			host: "0.0.0.0", // Docker 内部からホストにアクセス可能にする
+			port: 3000, // Vite サーバーのポート番号
+			watch: {
+				usePolling: true, // ファイル監視にポーリングを使用（Docker で必要な場合が多い）
+			},
+		},
 	},
 });
 
