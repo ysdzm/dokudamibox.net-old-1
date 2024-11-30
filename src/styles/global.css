@@ -30,7 +30,11 @@
 	}
 
 	body {
-		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-8 pt-16 font-mono text-sm font-normal text-textColor antialiased;
+		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-8 pt-8 font-mono text-sm font-normal text-textColor antialiased;
+	}
+
+	body {
+		overflow: scroll; /* 必要に応じて scroll や auto に変更 */
 	}
 }
 
@@ -47,12 +51,14 @@ h4 {
 }
 
 h1 {
-	@apply text-2xl font-semibold text-accent-2
+	@apply text-2xl font-semibold text-accent-2 py-2
 }
 
 h2 {
-	@apply text-xl font-bold;
+	@apply text-xl font-bold py-2;
 }
+
+/* h1, h2 のスタイル */
 
 ul {
 	@apply list-disc pl-5;
@@ -70,7 +76,7 @@ a:is([href^="https://github.com/"],
     width: 16px;                 /* 横幅 */
     height: 16px;                /* 縦幅 */
     vertical-align: -3px;        /* 要素を下方向に3ピクセルオフセット */
-    margin-right: 3px;           /* 右要素との距離 */
+    margin-right: 5px;           /* 右要素との距離 */
     background-size: contain;    /* 背景画像のサイズを要素に合わせる */
 }
 
@@ -98,3 +104,27 @@ a[href^="https://www.pixiv.net/"]::before {
 a[href^="https://"] {
 	color: hsl(var(--theme-accent))
 }
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap; /* 自動で折り返し */
+}
+
+.flex-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px; /* 各アイテムの間隔 */
+}
+
+/* メディアクエリで画面幅が768px以下の場合 */
+@media (max-width: 768px) {
+	.flex-container {
+		flex-direction: column; /* 縦並びに変更 */
+		height: auto; /* 高さを自動調整 */
+	}
+}
+

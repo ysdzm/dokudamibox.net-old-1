@@ -7,14 +7,14 @@ import ThemeToggle from "../ThemeToggle.astro";
 const url = new URL(Astro.request.url);
 ---
 
-<header class="group relative mb-10 flex items-center sm:ps-[4.5rem]" id="main-header">
+<header class="group relative mb-5 flex items-center sm:ps-[4.5rem]" id="main-header">
 	<div class="flex sm:flex-col">
 		<a
 			aria-current={url.pathname === "/" ? "page" : false}
 			class="inline-flex items-center hover:filter-none sm:relative sm:inline-block"
 			href="/"
 		>
-			<img src="/dokudami.png" class="sm:absolute sm:start-[-4.5rem]" style="width:50px;">
+			<img class="sm:absolute sm:start-[-4.5rem]" src="/dokudami.png" style="width:50px;">
 			<span class="text-xl font-bold sm:text-2xl">dokudamibox.net</span>
 		</a>
 		<nav
