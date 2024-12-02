@@ -26,7 +26,7 @@ const ogOptions: SatoriOptions = {
 };
 
 // 固定ページ用のOGPマークアップ
-const markup = (title: string, description: string) =>
+const markup = () =>
 	html`<div tw="flex flex-col w-full h-full bg-[#1d1f21] text-[#c9cacc]">
 		<div tw="flex flex-col flex-1 w-full p-10 justify-center">
 			<div tw="flex items-center">
