@@ -34,7 +34,7 @@
 	}
 
 	body {
-		overflow: scroll; /* 必要に応じて scroll や auto に変更 */
+		overflow-y: scroll;
 	}
 }
 
