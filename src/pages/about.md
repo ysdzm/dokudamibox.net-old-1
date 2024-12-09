@@ -6,9 +6,11 @@ description: 説明
 
 <h1 class="title ">About</h1>
 
+## Profile
+
 - dokudami
 
-## Link
+## Links
 
 - [ysdzm(dokudami) GitHub](https://github.com/ysdzm)
 - [dokudami(@dokudamichang) X](https://x.com/dokudamichang)
@@ -16,7 +18,7 @@ description: 説明
 - [dokudami Pixiv](https://www.pixiv.net/users/62534197)
 - [ドクダミ日記 はてなブログ](https://dokudamichang.hatenablog.com/archive)
 
-## 資格
+## Qualifications
 
 - 応用情報技術者 (2024/6)
 - 色彩検定2級 (2022/12)
