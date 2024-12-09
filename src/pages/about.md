@@ -26,6 +26,14 @@ description: 説明
 - VR技術者試験セオリーコース (2021/8)
 - ITパスポート (2020/7)
 
+## Works
+
+- WIP
+
+## Posts
+
+- WIP
+
 ## 生存報告
 
 <!-- - <p style="text-align: center; display: inline-flex; align-items: center; justify-content: center; margin: 0;"><img src="http://www.google.com/s2/favicons?domain=https://scrapbox.io" alt="Scrapbox Favicon" style="margin-right: 8px; vertical-align: middle; width: 16px; height: 16px;">Scrapbox</p><img src="https://pixe.la/v1/users/dokudami/graphs/dokudamibox.svg" alt="Image 1" style="width: 100%; margin :0">
