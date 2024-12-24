@@ -16,7 +16,7 @@ const { as: Tag = "div", post, withDesc = false } = Astro.props;
 const postDate = getPostSortDate(post);
 ---
 
-<FormattedDate class="min-w-[120px] text-gray-600 dark:text-gray-400" date={postDate} />
+<!-- <FormattedDate class="min-w-[120px] text-gray-600 dark:text-gray-400" date={postDate} /> -->
 <Tag>
 	{post.data.draft && <span class="text-red-500">(Draft) </span>}
 	<a class="cactus-link" data-astro-prefetch href={`/posts/${post.slug}/`}>
@@ -24,7 +24,7 @@ const postDate = getPostSortDate(post);
 	</a>
 	{
 		post.data.coverImage && (
-		<div class="aspect-h-9 aspect-w-16 mb-6">
+		<div class="aspect-h-9 aspect-w-16 mb-6" style="width: 150px;">
 			<Image
 				alt={post.data.coverImage.alt}
 				class="object-cover"
