@@ -29,7 +29,16 @@ description: 説明
 
 ## 生存報告
 
-<img src="https://pixe.la/v1/users/dokudami/graphs/dokudamibox.svg" alt="Image 1" style="width: 100%; margin :0">
+<div style="display: flex; justify-content: space-between; gap: 20px; align-items: flex-start;">
+    <div style="flex: 1; max-height: 400px;">
+        <a href="https://pixe.la/v1/users/dokudami/graphs/dokudamibox.html" target="_blank">
+            <picture>
+                <source srcset="https://pixe.la/v1/users/dokudami/graphs/dokudamibox.svg?mode=short" media="(max-width: 768px)">
+                <img src="https://pixe.la/v1/users/dokudami/graphs/dokudamibox.svg" alt="Pixela Graph" style="width: 100%; object-fit: contain;">
+            </picture>
+        </a>
+    </div>
+</div>
 
 ## バナー
 
