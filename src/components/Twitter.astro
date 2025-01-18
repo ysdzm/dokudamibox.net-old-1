@@ -11,7 +11,10 @@ baseUrl.searchParams.set("omit_script", "true");
 
 const tweet = await fetch(baseUrl.toString())
   .then<{ html: string }>((res) => res.json())
-  .catch((err) => null);
+  .catch((err) => {
+  console.error("Error fetching tweet:", err);
+  return null;
+});
 ---
 
 {
