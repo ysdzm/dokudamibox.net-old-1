@@ -2,134 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	:root,
-	:root[data-theme="light"] {
-		color-scheme: light;
-		/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
-		--theme-bg: 0deg 0% 98%;
-		--theme-link: 172deg 18% 41%;
-		--theme-text: 203deg 11% 15%;
-		--theme-accent: 131deg 62% 40%;
-		--theme-accent-2: 0deg 0% 7%;
-		--theme-quote: 351deg 66% 48%;
-	}
-
-	:root[data-theme="dark"] {
-		color-scheme: dark;
-		--theme-bg: 210deg 6% 12%;
-		--theme-link: 330deg 49% 67%;
-		--theme-text: 220deg 3% 79%;
-		--theme-accent: 131deg 62% 40%;
-		--theme-accent-2: 0deg 0% 93%;
-		--theme-quote: 102deg 100% 86%;
-	}
-
-	html {
-		@apply scroll-smooth;
-	}
-
-	body {
-		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-8 pt-8 font-mono text-sm font-normal text-textColor antialiased;
-	}
-
-	body {
-		overflow-y: scroll;
-	}
+html {
+  overflow-y: scroll;
+  color-scheme: light;
 }
 
-ol {
-	@apply list-decimal pl-5;
+html.dark {
+  color-scheme: dark;
 }
 
-ul {
-	@apply list-disc pl-5;
+html,
+body {
+  @apply size-full;
 }
 
-h4 {
-	@apply text-lg border-b border-black my-5;
+body {
+  @apply font-sans antialiased;
+  @apply flex flex-col;
+  @apply bg-stone-100 dark:bg-stone-900;
+  @apply text-black/50 dark:text-white/75;
 }
 
-h1 {
-	@apply text-2xl font-semibold text-accent-2 py-2
+header {
+  @apply fixed top-0 left-0 right-0 z-50 py-5;
+  @apply bg-stone-100/75 dark:bg-stone-900/25;
+  @apply backdrop-blur-sm saturate-200;
 }
 
-h2 {
-	@apply text-xl font-bold py-2;
+main {
+  @apply flex-1 py-32;
 }
 
-/* h1, h2 のスタイル */
-
-ul {
-	@apply list-disc pl-5;
+footer {
+  @apply py-5 text-sm;
 }
 
-/* 共通のスタイル：リンクの前にファビコンを表示 */
-a:is([href^="https://github.com/"], 
-     [href^="https://twitter.com/"], 
-     [href^="https://x.com/"], 
-     [href^="https://qiita.com/"], 
-	 [href^="https://www.pixiv.net/"], 
-     [href^="https://dokudamichang.hatenablog.com/"],
-	 [href^="https://annict.com/"])::before {
-    content: '';                 /* 空のコンテンツ */
-    display: inline-block;       /* 行内に配置、高さや幅を持つ */
-    width: 16px;                 /* 横幅 */
-    height: 16px;                /* 縦幅 */
-    vertical-align: -3px;        /* 要素を下方向に3ピクセルオフセット */
-    margin-right: 5px;           /* 右要素との距離 */
-    background-size: contain;    /* 背景画像のサイズを要素に合わせる */
+article {
+  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
+  @apply prose-headings:font-semibold prose-p:font-serif;
+  @apply prose-headings:text-black prose-headings:dark:text-white;
 }
 
-/* 個別リンクのファビコンを指定 */
-a[href^="https://github.com/"]::before {
-    background: url(http://www.google.com/s2/favicons?domain=https://github.com/);
+@layer utilities {
+  article a {
+    @apply font-sans text-current underline underline-offset-2;
+    @apply decoration-black/15 dark:decoration-white/30;
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  article a:hover {
+    @apply text-black dark:text-white;
+    @apply decoration-black/25 dark:decoration-white/50;
+  }
 }
 
-a[href^="https://twitter.com/"], a[href^="https://x.com/"]::before {
-    background: url(http://www.google.com/s2/favicons?domain=https://twitter.com/);
+.animate {
+  @apply opacity-0 translate-y-3;
+  @apply transition-all duration-700 ease-out;
 }
 
-a[href^="https://qiita.com/"]::before {
-    background: url(http://www.google.com/s2/favicons?domain=https://qiita.com/);
+.animate.show {
+  @apply opacity-100 translate-y-0;
 }
 
-a[href^="https://dokudamichang.hatenablog.com/"]::before {
-    background: url(http://www.google.com/s2/favicons?domain=https://hatena.blog/);
+html #back-to-top {
+  @apply opacity-0 pointer-events-none;
 }
 
-a[href^="https://www.pixiv.net/"]::before {
-    background: url(http://www.google.com/s2/favicons?domain=https://www.pixiv.net/);
+html.scrolled #back-to-top {
+  @apply opacity-100 pointer-events-auto;
 }
-
-a[href^="https://annict.com/"]::before {
-    background: url(http://www.google.com/s2/favicons?domain=https://annict.com/);
-}
-
-a[href^="https://"] {
-	color: hsl(var(--theme-accent))
-}
-
-.flex-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-	flex-wrap: wrap; /* 自動で折り返し */
-}
-
-.flex-item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 10px; /* 各アイテムの間隔 */
-}
-
-/* メディアクエリで画面幅が768px以下の場合 */
-@media (max-width: 768px) {
-	.flex-container {
-		flex-direction: column; /* 縦並びに変更 */
-		height: auto; /* 高さを自動調整 */
-	}
-}
-
