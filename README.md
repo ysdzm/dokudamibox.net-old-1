@@ -1,64 +1,60 @@
-![Astro Nano](_astro_nano.png)
+# [dokudamibox.net](https://dokudamibox.net)
 
-Astro Nano is a static, minimalist, lightweight, lightning fast portfolio and blog theme.
+- ![Deployment Status](https://github.com/ysdzm/dokudamibox.net/actions/workflows/deploy.yml/badge.svg)
 
-Built with Astro, Tailwind and Typescript, an no frameworks.
+This repository contains the source code for a static website built with [Astro](https://astro.build/).
 
-It was designed as an even more minimal theme than my popular theme [Astro Sphere](https://github.com/markhorn-dev/astro-sphere)
+## Features
 
-## 🚀 Deploy your own
+- 🌟 **Static Site Generation** powered by Astro
+- 🚀 **Automatic Deployment** via GitHub Actions
+- 🔧 **Easy Development Setup** with `npm run dev`
 
-[![Deploy with Vercel](_deploy_vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-nano)  [![Deploy with Netlify](_deploy_netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-nano)
+## Usage
 
-## 📋 Features
+```bash
+$ git clone https://github.com/ysdzm/dokudamibox.net.git
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
+$ cd dokudamibox.net
 
-## 💯 Lighthouse score
-![Astro Nano Lighthouse Score](_lighthouse.png)
+$ npm install
 
-## 🕊️ Lightweight
-No frameworks or added bulk
+$ npm run dev
+```
 
-## ⚡︎ Fast
-Rendered in ~40ms on localhost
+## Deploy
 
-## 📄 Configuration
+This project is automatically deployed using GitHub Actions.  
 
-The blog posts on the demo serve as the documentation and configuration.
+### Automatic Deployment
 
-## 💻 Commands
+- Pushing changes to the `main` branch triggers the deployment workflow.  
+- You can monitor deployment progress and logs in the [Actions tab](https://github.com/ysdzm/dokudamibox.net/actions).  
 
-All commands are run from the root of the project, from a terminal:
+## Development Environment (Optional: DevContainer)
 
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
+For an optimized development setup, use the included DevContainer configuration:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run dev:network`     | Starts local dev server on local network         |
-| `npm run sync`            | Generates TypeScript types for all Astro modules.|
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run preview:network` | Preview build on local network                   |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run lint`            | Run ESLint                                       |
-| `npm run lint:fix`        | Auto-fix ESLint issues                           |
+1. Ensure you have the following installed:
+   - [Docker](https://www.docker.com/)
+   - [Visual Studio Code](https://code.visualstudio.com/)
+   - [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-## 🏛️ License
+2. Open the repository in VS Code and choose **"Reopen in Container"**.  
 
-MIT
+3. Once the container is running, install dependencies:  
+```
+$ npm install
+```
+
+4. Start the development server:  
+```
+$ npm run dev
+```
+## Contributing
+
+We welcome contributions! Feel free to open issues or submit pull requests to improve the project.  
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).  
