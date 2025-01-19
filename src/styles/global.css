@@ -30,7 +30,7 @@
 	}
 
 	body {
-		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-4 pt-4 font-mono text-sm font-normal text-textColor antialiased;
+		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-4 pt-4 sm:px-8 sm:pt-8 font-mono text-sm font-normal text-textColor antialiased;
 	}
 
 	body {
