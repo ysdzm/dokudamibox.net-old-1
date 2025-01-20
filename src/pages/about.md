@@ -1,7 +1,8 @@
 ---
 layout: ../layouts/Layout.astro
-title: タイトル
-description: 説明
+title: "About"
+description: "This is the about page."
+publishDate: "2025/01/20"
 ---
 
 <h1 class="title ">About</h1>

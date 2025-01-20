@@ -1,7 +1,8 @@
 ---
 layout: ../layouts/Layout.astro
-title: タイトル
-description: 説明
+title: "index"
+description: "This is a index page"
+publishDate: "2025/01/20"
 ---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
