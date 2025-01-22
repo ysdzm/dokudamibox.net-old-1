@@ -19,7 +19,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 
 <!-- <FormattedDate class="min-w-[120px] text-gray-600 dark:text-gray-400" date={postDate} /> -->
 <Tag>
-    <a class="cactus-link" data-astro-prefetch href={`/posts/${post.slug}/`}>
+    <a class="relative cactus-link" data-astro-prefetch href={`/posts/${post.slug}/`}>
         <div class="flex border border-gray-200 dark:border-gray-700 h-[80px]">
             {/* 左側 */}
             <div class="w-2/3 pl-4 flex items-center">
@@ -46,6 +46,14 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
                 </div>
             )}
         </div>
+    <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24"
+        class="absolute top-1/2 right-2 -translate-y-1/2 size-5 stroke-2 fill-none stroke-current invert">
+        <line x1="5" y1="12" x2="19" y2="12" class="translate-x-3 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
+        <polyline points="12 5 19 12 12 19" class="-translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
+    </svg>
+            
     </a>
 </Tag>
 
