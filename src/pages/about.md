@@ -43,8 +43,4 @@ publishDate: "2025/01/20"
 
 ## バナー
 
-- <a href="https://nitmic.club.nitech.ac.jp/"><img class= "not-prose" src="/nitmic_banner.png" alt="Example Image" style="width: 300px;" /></a>
-- <img class= "not-prose" src="/nitmic_banner.png" alt="Example Image" style="width: 300px;" />
-- <img class= "not-prose" src="/nitmic_banner.png" alt="Example Image" style="width: 100px;" />
-- <img class= "not-prose" src="/nitmic_banner.png" alt="Example Image" style="width: 50px;" />
-- ![](/nitmic_banner.png)
+<a href="https://nitmic.club.nitech.ac.jp/"><img src="/nitmic_banner.png" alt="Example Image" style="width: 300px;" /></a>
