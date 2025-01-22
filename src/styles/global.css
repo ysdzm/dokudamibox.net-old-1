@@ -62,6 +62,7 @@ h2 {
 
 ul {
 	@apply list-disc pl-5;
+	inset-inline-start: 0px;
 }
 
 /* 共通のスタイル：リンクの前にファビコンを表示 */
