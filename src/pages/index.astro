@@ -1,0 +1,44 @@
+---
+import ArrowCard from "@/components/ArrowCard.astro";
+import SocialList from "@/components/SocialList.astro";
+import PostPreview from "@/components/blog/PostPreview.astro";
+import { getAllPosts } from "@/data/post";
+import PageLayout from "@/layouts/Base.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+
+// Posts
+const MAX_POSTS = 3;
+const allPosts = await getAllPosts();
+const allPostsByDate = allPosts
+	.slice(0, MAX_POSTS) as CollectionEntry<"post">[];
+
+---
+
+<PageLayout meta={{ title: "Home" }}>
+<div class="prose-headings:pl-4 prose-cactus prose-headings:font-semibold prose-headings:text-accent-2 prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
+>
+	<div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+		<img src="https://count.getloli.com/@dokudamibox.net?name=dokudamibox.net&theme=green&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=0" alt="Image" />
+	</div>
+	<!-- その時が来たらコメントアウトを外す -->
+	<!-- <section aria-label="Blog post list" class="mt-16">
+		<div class="flex flex-wrap gap-y-2 items-center justify-between">
+			<h2 class="font-semibold text-black dark:text-white">
+			  Latest Posts
+			</h2>
+			<a href="/posts" class="underline">
+				See all posts
+			</a>
+		</div>
+		<ul class="space-y-4" role="list">
+			{
+				allPostsByDate.map((p) => (
+					<li>
+						<ArrowCard post={p} />
+					</li>
+				))
+			}
+		</ul>
+	</section> -->
+</div>
+</PageLayout>

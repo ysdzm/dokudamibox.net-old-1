@@ -13,7 +13,10 @@
       "extensions": [
         "astro-build.astro-vscode",
         "esbenp.prettier-vscode"
-      ]
+      ],
+      "settings": {
+        "editor.formatOnSave": false
+      }
     }
   }
 }
