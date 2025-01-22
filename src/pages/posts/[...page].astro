@@ -71,17 +71,15 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 		<section aria-label="Blog post list">
 			{
 				descYearKeys.map((yearKey) => (
-					<>
-						<h2 class="title text-lg">{yearKey}</h2>
-						<ul class="space-y-4" role="list">
-							{groupedByYear[yearKey]?.map((p) => (
-								<li class="gap-2">
-									{/* <PostPreview post={p} /> */}
-									<ArrowCard post={p} />
-								</li>
-							))}
-						</ul>
-					</>
+					<h2 class="title text-lg">{yearKey}</h2>
+					<ul class="space-y-4" role="list">
+						{groupedByYear[yearKey]?.map((p) => (
+							<li class="gap-2">
+								{/* <PostPreview post={p} /> */}
+								<ArrowCard post={p} />
+							</li>
+						))}
+					</ul>
 				))
 			}
 			<Pagination {...paginationProps} />
