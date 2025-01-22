@@ -59,12 +59,12 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 		prose-headings:before:text-accent 
 		prose-headings:before:content-['#'] 
 		prose-th:before:content-none">
-	<h1 class="mb-6">Posts（WIP）</h1>
+	<h1 class="title ">Posts（WIP）</h1>
 	<div>
 		<section aria-label="Blog post list">
 			{
 				descYearKeys.map((yearKey) => (
-					<h2 class="title text-lg">{yearKey}</h2>
+					<h2>{yearKey}</h2>
 					<ul class="space-y-4" role="list">
 						{groupedByYear[yearKey]?.map((p) => (
 							<li class="not-prose">
