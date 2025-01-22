@@ -2,6 +2,7 @@
 import type { GetStaticPaths, Page } from "astro";
 import type { CollectionEntry } from "astro:content";
 
+import ArrowCard from "@/components/ArrowCard.astro";
 import Pagination from "@/components/Paginator.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import { getAllPosts, getUniqueTags, groupPostsByYear, sortMDByDate } from "@/data/post";
@@ -49,16 +50,17 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 <PageLayout meta={meta}>
 	<div class="prose-headings:pl-4 prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none">
 	<h1 class="mb-6">Posts（WIP）</h1>
-	<div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
+	<div>
 		<section aria-label="Blog post list">
 			{
 				descYearKeys.map((yearKey) => (
 					<>
 						<h2 class="title text-lg">{yearKey}</h2>
-						<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8 mt-6 text-start">
+						<ul class="space-y-4" role="list">
 							{groupedByYear[yearKey]?.map((p) => (
-								<li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
-									<PostPreview post={p} />
+								<li class="gap-2">
+									{/* <PostPreview post={p} /> */}
+									<ArrowCard post={p} />
 								</li>
 							))}
 						</ul>
@@ -67,7 +69,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 			}
 			<Pagination {...paginationProps} />
 		</section>
-		{
+		<!-- {
 			!!uniqueTags.length && (
 				<aside>
 					<h2 class="title mb-4 flex items-center text-lg">
@@ -109,7 +111,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 					</span>
 				</aside>
 			)
-		}
+		} -->
 	</div>
 </div>
 </PageLayout>
