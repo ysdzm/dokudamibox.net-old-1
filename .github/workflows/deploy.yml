@@ -1,10 +1,13 @@
 name: Deploy to GitHub Pages
 
 on:
+  # `develop` ブランチにプッシュするたびにワークフローを実行します
   push:
-    branches: [ main ]
+    branches: [ develop ]
+  # このワークフローを GitHub の Actions タブから手動で実行できるようにします
   workflow_dispatch:
 
+# このジョブがリポジトリをクローンし、ページデプロイメントを作成することを許可します
 permissions:
   contents: read
   pages: write
@@ -31,14 +34,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build site
-        run: pnpm run build
-
-      - name: Upload artifact for deployment
-        uses: actions/upload-artifact@v4
+      - name: Build and deploy site
+        uses: withastro/action@v1
         with:
-          name: build-output
-          path: ./dist
+          path: . # リポジトリ内のAstroプロジェクトのルートロケーション
+          node-version: 20 # サイト構築に使用するNodeのバージョン
+          package-manager: pnpm@latest # 使用するパッケージマネージャ
 
   deploy:
     needs: build
@@ -47,14 +48,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build-output
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
