@@ -5,6 +5,7 @@ import BlogHero from "@/components/blog/Hero.astro";
 import TOC from "@/components/blog/TOC.astro";
 import WebMentions from "@/components/blog/webmentions/index.astro";
 
+import PostTags from "../components/blog/PostTags.astro";
 import BaseLayout from "./Base.astro";
 
 interface Props {
@@ -32,6 +33,7 @@ const { headings } = await post.render();
 				<slot />
 				<WebMentions />
 			</div>
+			<!-- <PostTags tags={post.data.tags || []} /> -->
 		</article>
 	</div>
 	<button
