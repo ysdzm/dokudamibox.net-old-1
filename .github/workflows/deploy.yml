@@ -1,13 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  # `develop` ブランチにプッシュするたびにワークフローを実行します
   push:
     branches: [ develop ]
-  # このワークフローを GitHub の Actions タブから手動で実行できるようにします
   workflow_dispatch:
 
-# このジョブがリポジトリをクローンし、ページデプロイメントを作成することを許可します
 permissions:
   contents: read
   pages: write
@@ -21,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -50,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
