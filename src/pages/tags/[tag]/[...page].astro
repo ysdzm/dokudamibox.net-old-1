@@ -51,12 +51,24 @@ const paginationProps = {
 ---
 
 <PageLayout meta={meta}>
+	<div class="
+	prose-headings:pl-4 
+	prose-sm
+	prose-cactus
+	prose-headings:font-semibold
+	prose-headings:text-accent-2
+	prose-headings:before:absolute 
+	prose-headings:before:-ms-4 
+	prose-headings:before:text-accent 
+	prose-headings:before:content-['#'] 
+	prose-th:before:content-none">
 	<h1 class="title mb-6 flex items-center">
 		<a class="text-accent sm:hover:underline" href="/tags/">Tags</a>
 		<span class="me-3 ms-2">→</span>
 		<span class="text-xl">#{tag}</span>
 	</h1>
 	<section aria-label="Blog post list">
+		<!-- <h2>{tag}</h2> -->
 		<div class="space-y-4 not-prose">
 			{
 				page.data.map((p) => (
@@ -69,4 +81,5 @@ const paginationProps = {
 		</div>
 		<Pagination {...paginationProps} />
 	</section>
+	</div>
 </PageLayout>
