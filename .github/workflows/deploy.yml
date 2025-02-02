@@ -35,7 +35,7 @@ jobs:
         run: pnpm install
 
       - name: Build and deploy site
-        uses: withastro/action@v1
+        uses: withastro/action@latest
         with:
           path: . # リポジトリ内のAstroプロジェクトのルートロケーション
           node-version: 20 # サイト構築に使用するNodeのバージョン
