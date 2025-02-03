@@ -9,7 +9,7 @@ publishDate: "2025/01/20"
 
 ## Profile
 
-- dokudami
+dokudamiというハンドルネームでインターネットをしています
 
 ## Links
 
@@ -33,6 +33,4 @@ publishDate: "2025/01/20"
     </div>
 </div>
 
-## バナー
-
-<a href="https://nitmic.club.nitech.ac.jp/"><img src="/nitmic_banner.png" alt="Example Image" style="width: 300px;" /></a>
+- 参考：[Scrapboxへの更新がどれくらい活発におこなわれているかをPixelaで可視化する](https://blog.a-know.me/entry/2019/10/22/182629)
