@@ -11,14 +11,6 @@ publishDate: "2025/01/20"
 
 - dokudami
 
-## Qualifications
-
-- 応用情報技術者 (2024/6)
-- 色彩検定2級 (2022/12)
-- VR技術者試験アプリケーションコース (2022/1)
-- VR技術者試験セオリーコース (2021/8)
-- ITパスポート (2020/7)
-
 ## Links
 
 - [dokudami(@dokudamichang) X](https://x.com/dokudamichang)
