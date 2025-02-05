@@ -9,7 +9,7 @@ publishDate: "2025/01/20"
 
 ## Profile
 
-- dokudamiというハンドルネームでインターネットをしています
+- dokudami
 
 ## Links
 
